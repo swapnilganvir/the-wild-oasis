@@ -16,7 +16,6 @@
     <li><a href="#tech-stack">Tech Stack</a></li>
     <li><a href="#core-features">Core Features</a></li>
     <li><a href="#component-structure">Component Structure</a></li>
-    <li><a href="#data-handling">Data Handling</a></li>
     <li><a href="#conclusion">Conclusion</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -25,7 +24,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is an internal-use hotel management dashboard that allows admins and staff to manage cabins, bookings, and hotel settings in a user-friendly interface. It features dashboard analytics, sorting/filtering/pagination of bookings, dark/light mode toggle, and admin-level controls.
+This project is a full-stack Hotel Management Dashboard designed for internal use by hotel staff and admins. It helps manage bookings, cabins, and hotel settings with real-time data operations. Users can view bookings, sort/filter them, paginate through lists, and perform check-ins and check-outs efficiently.
 
 
 <!-- Tech Stack -->
@@ -44,31 +43,38 @@ This is an internal-use hotel management dashboard that allows admins and staff 
 
 <!-- Core Features -->
 ## Core Features
-  * <b>Dashboard View</b>: Visual overview of hotel operations with interactive charts.
-  * <b>Bookings Management</b>: Filter, sort, and paginate bookings from the Supabase database.
-  * <b>Cabins Management</b>: Admins can add, edit, and delete cabin entries.
-  * <b>Hotel Settings</b>: Update hotel-wide settings via a settings panel
-  * <b>User Management</b>: Add and manage admin users securely.
-  * <b>Dark/Light Mode</b>: Toggle between themes using CSS class switching.
+1. #### Booking Dashboard
+    * View a list of all bookings with filter, sort, and pagination.
+    * View full booking details and status.
+    * Check-in/check-out guests and mark payments as received.
+    * Add breakfast charges before check-in.
+
+2. #### Cabin & Admin Management
+    * Add, update, or delete cabins in the hotel.
+    * Add and manage admin users.
+
+2. #### Hotel Settings
+    * Update hotel information and toggle between light/dark mode
+
+2. #### UI/UX Enhancements
+    * Beautiful transitions with smooth animations.
+    * Responsive design with intuitive layout.
+    * Notification system for actions like check-in, deletion, form submissions.
   
 
 <!-- Component Structure -->
 
 ## Component Structure
-The app follows reusable component design. Components like `Button`, `Modal`, and `Form` are highly configurable and reused across different parts of the app using props. This reduces duplication and improves maintainability.
-
-
-<!-- Data Handling -->
-
-## Data Handling
-* Booking data is fetched, filtered, and paginated directly using Supabase queries via the API.
-* Form data is managed using react-hook-form for better performance in large forms.
-* React-Query ensures consistent data syncing with the backend and caching for a better user experience.
+* <b>Component Reuse</b>: All buttons, modals, inputs, and forms use reusable components with props.
+* <b>API-Centric Data Handling</b>: Sorting, filtering, and pagination done on server-side via Supabase.
+* <b>Theming</b>: Color schemes toggled using class-based themes for dark/light mode support.
+* <b>Performance</b>: React Query efficiently caches and refetches server data.
+* <b>Forms</b>: Form data is managed using react-hook-form for better performance in large forms
 
 
 <!-- Conclusion -->
 ## Conclusion
-This hotel management app demonstrates strong component reuse, clean state handling with react-query, and advanced filtering/pagination on data. Combined with a clean UI and dark mode support, it’s optimized for usability and internal efficiency. Future features like real-time updates and user roles can extend the product further.
+This app streamlines internal hotel operations with an intuitive dashboard and robust functionality. It supports essential admin tasks like booking control, room/cabin updates, and hotel configuration. With Supabase, styled-components, and interactive charts, this project is scalable, modern, and production-ready. Combined with a clean UI and dark mode support.
 
 
 <!-- CONTACT -->
